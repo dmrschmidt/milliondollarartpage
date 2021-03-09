@@ -165,7 +165,7 @@ sup {
 a {
   color: #8e75dd;
   text-decoration: none;
-  /*background-color: transparent;*/
+  background-color: transparent;
 }
 
 a:hover {
@@ -9639,11 +9639,19 @@ hr.light {
 }
 
 #teaser {
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 8px;
   box-shadow: 5px 5px 15px 5px rgba(255, 255, 255, 0.6);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
+}
+
+#teaser .pre-sale {
+  color: red;
+}
+
+#teaser .subscribe {
+  cursor: hand;
 }
 
 #mainNav {
