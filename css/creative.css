@@ -9646,6 +9646,11 @@ hr.light {
   backdrop-filter: blur(8px);
 }
 
+#teaser .content {
+  max-width: 500px;
+  margin: auto;
+}
+
 #teaser .pre-sale {
   color: red;
 }
