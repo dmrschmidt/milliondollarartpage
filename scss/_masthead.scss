@@ -1,0 +1,41 @@
+// Styling for the masthead
+header.masthead {
+  padding-top: 10rem;
+  padding-bottom: calc(10rem - #{$navbar-height});
+  background: white;
+  background-image: url("/img/bg-masthead.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+  h1 {
+    font-size: 2.25rem;
+    font-family: $font-family-serif;
+    font-weight: 900;
+  }
+
+  .btn {
+    min-width: 50%;
+  }
+
+  @include media-breakpoint-up(lg) {
+    height: 100vh;
+    min-height: 40rem;
+    padding-top: $navbar-height;
+    padding-bottom: 0;
+
+    p {
+      font-size: 1.15rem;
+    }
+
+    h1 {
+      font-size: 3rem;
+    }
+  }
+
+  @include media-breakpoint-up(xl) {
+    h1 {
+      font-size: 3.5rem;
+    }
+  }
+}

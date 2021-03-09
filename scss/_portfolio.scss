@@ -1,0 +1,34 @@
+#portfolio {
+  h1 {
+    font-weight: 700;
+  }
+
+  .card {
+    position: relative;
+
+    a {
+      color: white;
+    }
+
+    &.hidden {
+      display: none;
+    }
+
+    &:hover {
+      .card-body-hidden {
+        transition: opacity 0.5s ease;
+        opacity: 1;
+      }
+    }
+  }
+
+  .card-body-hidden {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: fade-out($primary, 0.1);
+  }
+}

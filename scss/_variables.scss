@@ -1,0 +1,58 @@
+// Variables
+
+// Color overrides
+
+// Set a custom color
+$orange: #f4623a !default;
+$brown: #a3875b !default;
+$blue: #4A90E2;
+$gray-theme: #313131;
+
+/* SCSS HEX */
+$medium-purple: #8E75DDff;
+$thistle: #D8C1EDff;
+$thistle-2: #DEC8EDff;
+$salmon-pink: #FF94A5ff;
+$orange-yellow-crayola: #FED479ff;
+
+/* SCSS HSL */
+$medium-purple: hsla(254, 47%, 87%, 1);
+$thistle: hsla(271, 19%, 93%, 1);
+$thistle-2: hsla(276, 16%, 93%, 1);
+$salmon-pink: hsla(350, 42%, 100%, 1);
+$orange-yellow-crayola: hsla(41, 52%, 100%, 1);
+
+/* SCSS RGB */
+$medium-purple: rgba(142, 117, 221, 1);
+$thistle: rgba(216, 193, 237, 1);
+$thistle-2: rgba(222, 200, 237, 1);
+$salmon-pink: rgba(255, 148, 165, 1);
+$orange-yellow-crayola: rgba(254, 212, 121, 1);
+
+/* SCSS Gradient */
+$gradient-top: linear-gradient(0deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-right: linear-gradient(90deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-bottom: linear-gradient(180deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-left: linear-gradient(270deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-top-right: linear-gradient(45deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-bottom-right: linear-gradient(135deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-top-left: linear-gradient(225deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-bottom-left: linear-gradient(315deg, #8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+$gradient-radial: radial-gradient(#8E75DDff, #D8C1EDff, #DEC8EDff, #FF94A5ff, #FED479ff);
+
+// Set primary color to brown
+$primary: $medium-purple !default;
+$warning: $orange-yellow-crayola !default;
+
+// Font overrides
+$font-family-sans-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$font-family-serif: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", 'Noto Color Emoji' !default;
+
+$font-family-base: $font-family-sans-serif !default;
+
+$headings-font-family: $font-family-serif !default;
+
+// Custom variables
+$navbar-height: 72px;
+$font-weight-bolder: 900 !default;
