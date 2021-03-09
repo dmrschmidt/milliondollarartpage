@@ -40,12 +40,17 @@
                                 <b class="pre-sale">Pre-Sale starts very soon.</b><br>
                             </p>
 
-                            <form>
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="youremail@gmail.com">
-                                    <input type="submit" value="Get Notified!" class="mt-2 btn btn-primary btn-block">
+                            <div id="signup">
+                                <form id="subscribe" action="https://soundcard-staging.herokuapp.com/email_notification_subscription/subscribe" method="POST">
+                                    <div class="form-group">
+                                        <input type="text" id="email" name="email_notification_subscription[email]" class="form-control" placeholder="youremail@gmail.com">
+                                        <input type="submit" value="Get Notified!" class="mt-2 btn btn-primary btn-block">
+                                    </div>
+                                </form>
+                                <div id="thanks" class="alert alert-success" role="alert">
+                                    <h3>Good Luck! You'll be notified before Pre-Sale starts.</h3>
                                 </div>
-                            </form>
+                            </div>
 
                             <p class="text-secondary small text-black-50">
                                 Get notified to be one of the first.
@@ -54,9 +59,6 @@
                                 so you can trade and re-sell your investment.<br>
                                 42% of the proceeds will be donated to <a href="https://www.betterplace.org/en">BetterPlace.org</a>.
                             </p>
-
-                            <div id="signup">
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -68,6 +70,9 @@
     <footer class="mt-auto text-white-50">
     </footer>
 </div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="js/creative.min.js" type="application/javascript"></script>
 
 </body>
 </html>

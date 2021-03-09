@@ -9659,6 +9659,10 @@ hr.light {
   cursor: hand;
 }
 
+#thanks {
+  display: none;
+}
+
 #mainNav {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
   background-color: rgba(230, 230, 230, 0.9);

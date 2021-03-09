@@ -1,55 +1,30 @@
-(function($) {
-  "use strict"; // Start of use strict
+(function ($) {
+    "use strict";
 
-  // Smooth scrolling using jQuery easing
-  $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
-    if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      if (target.length) {
-        $('html, body').animate({
-          scrollTop: (target.offset().top - 72)
-        }, 1000, "easeInOutExpo");
-        return false;
-      }
+    function validateEmail(id) {
+        const email_regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/i;
+        if (!email_regex.test($(`#${id}`).val())) {
+            $("#" + id).addClass("is-invalid");
+            return false;
+        }
+        return true;
     }
-  });
 
-  // Closes responsive menu when a scroll trigger link is clicked
-  $('.js-scroll-trigger').click(function() {
-    $('.navbar-collapse').collapse('hide');
-  });
+    $('#subscribe').submit(function (event) {
+        event.preventDefault();
 
-  // Activate scrollspy to add active class to navbar items on scroll
-  $('body').scrollspy({
-    target: '#mainNav',
-    offset: 75
-  });
+        if (validateEmail('email')) {
+            const form = $(this);
+            $.ajax({
+                type: form.attr('method'),
+                url: form.attr('action'),
+                data: form.serialize(),
+                success: () => {
+                    $('#subscribe').hide();
+                    $('#thanks').show();
+                }
+            });
+        }
+    });
 
-  // Collapse Navbar
-  var navbarCollapse = function() {
-    if ($("#mainNav").offset().top > 100) {
-      $("#mainNav").addClass("navbar-scrolled");
-    } else {
-      $("#mainNav").removeClass("navbar-scrolled");
-    }
-  };
-  // Collapse now if page is not at top
-  navbarCollapse();
-  // Collapse the navbar when page is scrolled
-  $(window).scroll(navbarCollapse);
-
-  $('.portfolio-selection .nav-link').click(function (event) {
-    event.preventDefault();
-    let type = $(event.target).data("type");
-    $('.portfolio-selection .nav-link').removeClass('active');
-    $(event.target).addClass('active');
-    if (type !== "") {
-      $(`.card`).addClass('hidden');
-      $(`.card.${type}`).removeClass('hidden');
-    } else {
-      $(`.card`).removeClass('hidden');
-    }
-  });
-
-})(jQuery); // End of use strict
+})(jQuery);
