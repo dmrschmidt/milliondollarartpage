@@ -9659,6 +9659,10 @@ hr.light {
   cursor: hand;
 }
 
+button.submit .loading {
+  display: none;
+}
+
 #thanks {
   display: none;
 }

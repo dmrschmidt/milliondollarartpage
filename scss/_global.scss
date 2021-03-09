@@ -115,6 +115,12 @@ hr.light {
   }
 }
 
+button.submit {
+  .loading {
+    display: none;
+  }
+}
+
 #thanks {
   display: none;
 }

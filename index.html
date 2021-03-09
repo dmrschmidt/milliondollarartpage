@@ -44,7 +44,16 @@
                                 <form id="subscribe" action="https://soundcard-staging.herokuapp.com/email_notification_subscription/subscribe" method="POST">
                                     <div class="form-group">
                                         <input type="text" id="email" name="email_notification_subscription[email]" class="form-control" placeholder="youremail@gmail.com">
-                                        <input type="submit" value="Get Notified!" class="mt-2 btn btn-primary btn-block">
+<!--                                        <input type="submit" value="Get Notified!" class="mt-2 btn btn-primary btn-block">-->
+
+                                        <button class="submit mt-2 btn btn-primary btn-block" type="submit">
+                                            <span class="prompt">Get Notified!</span>
+                                            <span class="loading">
+                                                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                                                Sending...
+                                            </span>
+                                        </button>
+
                                     </div>
                                 </form>
                                 <div id="thanks" class="alert alert-success" role="alert">

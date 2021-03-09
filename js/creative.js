@@ -14,6 +14,10 @@
         event.preventDefault();
 
         if (validateEmail('email')) {
+            $('button.submit').prop("disabled", true);
+            $('button.submit .loading').show();
+            $('button.submit .prompt').hide();
+
             const form = $(this);
             $.ajax({
                 type: form.attr('method'),
